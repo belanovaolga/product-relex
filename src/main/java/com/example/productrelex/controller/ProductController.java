@@ -13,7 +13,7 @@ public class ProductController {
 
     /**
      * создание нового вида товара
-     * @param createProductDto данные, необходимые для создания нового вида товара (
+     * @param productDto данные, необходимые для создания нового вида товара (
      *                         имя товара,
      *                         единица измерения,
      *                         изначальное количество товара)
@@ -21,9 +21,9 @@ public class ProductController {
      */
     @PostMapping("/createProduct")
     public ProductEntity createProduct(
-            @RequestBody CreateProductDto createProductDto
+            @RequestBody ProductDto productDto
             ) {
-        return productService.createProduct(createProductDto);
+        return productService.createProduct(productDto);
     }
 
     /**

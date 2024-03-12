@@ -1,6 +1,6 @@
 package com.example.productrelex.service;
 
-import com.example.productrelex.dto.CreateProductDto;
+import com.example.productrelex.dto.ProductDto;
 import com.example.productrelex.dto.ProductCountDto;
 import com.example.productrelex.entity.ProductEntity;
 import com.example.productrelex.repository.ProductRepository;
@@ -13,12 +13,12 @@ public class ProductServiceImpl implements ProductService {
     private final ProductRepository productRepository;
 
     @Override
-    public ProductEntity createProduct(CreateProductDto createProductDto) {
+    public ProductEntity createProduct(ProductDto productDto) {
         ProductEntity product = ProductEntity
                 .builder()
-                .name(createProductDto.getName())
-                .unitDto(createProductDto.getUnitDto())
-                .count(createProductDto.getCount())
+                .name(productDto.getName())
+                .unitDto(productDto.getUnitDto())
+                .count(productDto.getCount())
                 .build();
 
         return productRepository.save(product);

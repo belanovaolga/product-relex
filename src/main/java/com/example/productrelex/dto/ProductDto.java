@@ -10,7 +10,7 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class CreateProductDto {
+public class ProductDto {
     private String name;
 
     private UnitDto unitDto;
